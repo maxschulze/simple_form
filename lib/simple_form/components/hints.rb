@@ -2,7 +2,7 @@ module SimpleForm
   module Components
     module Hints
       def hint
-        template.content_tag(hint_tag, hint_text, hint_html_options) unless hint_text.blank?
+        template.content_tag(hint_tag, hint_text.html_safe, hint_html_options) unless hint_text.blank?
       end
 
       def hint_tag
